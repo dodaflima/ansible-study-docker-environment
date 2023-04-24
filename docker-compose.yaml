@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  alpine:
+    build: alpine/
+    ports:
+      - "2222:22"
+    deploy:
+      resources:
+          limits:
+            cpus: '0.5'
+            memory: 512M
+  debian:
+    build: debian/
+    ports:
+      - "2223:22"
+    deploy:
+      resources:
+          limits:
+            cpus: '0.5'
+            memory: 512M
+  ubuntu:
+    build: ubuntu/
+    ports:
+      - "2224:22"
+    deploy:
+      resources:
+          limits:
+            cpus: '0.5'
+            memory: 512M
+  fedora:
+    build: fedora/
+    ports:
+      - "2225:22"
+    deploy:
+      resources:
+          limits:
+            cpus: '0.5'
+            memory: 512M
