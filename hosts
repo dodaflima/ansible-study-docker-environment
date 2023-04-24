@@ -1,0 +1,20 @@
+all:
+  vars:
+    ansible_host: localhost
+    ansible_ssh_user: ansible
+    ansible_ssh_pass: ansible
+  children:
+    apt:
+      hosts:
+        debian:
+          ansible_port: 2223 
+        ubuntu:  
+          ansible_port: 2224 
+    apk:
+      hosts:
+        alpine:
+          ansible_port: 2222 
+    yum:
+      hosts:
+        fedora:
+          ansible_port: 2225 
